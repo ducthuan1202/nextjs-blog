@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { posts } from './../../data/posts'
 import Backlink from './../../components/backlink'
 
+import styles from './index.module.scss'
+
 
 function Posts({ posts }) {
     return (
@@ -25,6 +27,9 @@ function Posts({ posts }) {
                     </li>
                 ))}
             </ul>
+
+            <span className={styles.action_buttons}>Click me</span>
+            <span className={styles.reset_buttons}>Try now</span>
 
             <Backlink link="/" text="Back to home" withSeperator />
 

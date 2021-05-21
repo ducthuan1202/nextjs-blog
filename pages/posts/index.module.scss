@@ -1,0 +1,23 @@
+%toolbelt {
+
+  box-sizing: border-box;  
+  padding: 16px 32px;
+  margin: 3px;
+
+  &:hover {
+    border: 2px rgba(#000, 0.5) solid;
+    cursor: pointer;
+  }
+}
+
+.action_buttons {
+  @extend %toolbelt;
+  color: #4285f4;
+  background-color: tomato
+}
+
+.reset_buttons {
+  @extend %toolbelt;
+  color: #cddc39;
+  background-color: greenyellow
+}
