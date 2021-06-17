@@ -1,14 +1,12 @@
 import React from 'react'
-import Backlink from './../../components/backlink'
+import MainLayout from 'components/main.layout'
 
 function Page({ lucky_number }) {
 
     return (
-        <div>
+        <MainLayout>
             <h1>My Number {lucky_number}</h1>
-
-            <Backlink link="/" text="Back to home" withSeperator />
-        </div>
+        </MainLayout>
     );
 }
 

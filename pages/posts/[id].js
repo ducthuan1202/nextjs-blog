@@ -1,7 +1,8 @@
 import React from 'react'
-import {useRouter} from 'next/router'
-import Backlink from './../../components/backlink'
-import { posts } from './../../data/posts'
+import { useRouter } from 'next/router'
+import Backlink from 'components/backlink'
+import { posts } from 'data/posts'
+import MainLayout from 'components/main.layout'
 
 function Post({ post }) {
 
@@ -10,18 +11,18 @@ function Post({ post }) {
 
     if (!post) {
         return (
-            <div>
+            <MainLayout>
                 <h1>Post not found</h1>
                 <Backlink link="/" text="Back to list posts" withSeperator />
-            </div>
+            </MainLayout>
         )
     }
 
     return (
-        <div>
+        <MainLayout>
             <h1>Post {post.title}</h1>
             <Backlink link="/" text="Back to list posts" withSeperator />
-        </div>
+        </MainLayout>
     );
 }
 

@@ -1,15 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { posts } from './../../data/posts'
-import Backlink from './../../components/backlink'
-
+import { posts } from 'data/posts'
+import MainLayout from 'components/main.layout'
 import styles from './index.module.scss'
 
 
 function Posts({ posts }) {
     return (
-        <div>
+        <MainLayout>
             <h1>List Posts</h1>
             <Image
                 src="/me.png"
@@ -17,7 +16,7 @@ function Posts({ posts }) {
                 width={150}
                 height={150}
             />
-           
+
             <ul>
                 {posts.map((post) => (
                     <li key={post.id}>
@@ -31,9 +30,7 @@ function Posts({ posts }) {
             <span className={styles.action_buttons}>Click me</span>
             <span className={styles.reset_buttons}>Try now</span>
 
-            <Backlink link="/" text="Back to home" withSeperator />
-
-        </div>
+        </MainLayout>
     );
 }
 
