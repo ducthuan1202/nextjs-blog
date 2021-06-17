@@ -1,13 +1,11 @@
 {
-    "compilerOptions": {
-        "module": "system",
-        "noImplicitAny": true,
-        "removeComments": true,
+    "compilerOptions": {        
         "baseUrl": "./"
     },
     "include": [
         "pages",
-        "components"
+        "components",
+        "data"
     ],
     "exclude": [
         "node_modules",

@@ -1,27 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import Backlink from 'components/backlink'
 import { posts } from 'data/posts'
-import MainLayout from 'components/main.layout'
+import MainLayout from 'components/layouts/main'
+import PageNotFound from 'components/pageErrors/404'
+import Loading from 'components/preload'
 
 function Post({ post }) {
+
+    const [state, setState] = useState({
+        pageLoading: true,
+    })
+
+    useEffect(() => {
+        console.log('use efffect')
+        setTimeout(() => {
+            console.log('change loading')
+            setState({...state, pageLoading: false})
+        }, 1e3);
+    }, [])
 
     const router = useRouter()
     console.log(router)
 
+    if (state.pageLoading) {
+        return (
+            <Loading/>
+        )
+    }
+
     if (!post) {
         return (
-            <MainLayout>
-                <h1>Post not found</h1>
-                <Backlink link="/" text="Back to list posts" withSeperator />
-            </MainLayout>
+            <PageNotFound/>
         )
     }
 
     return (
         <MainLayout>
             <h1>Post {post.title}</h1>
-            <Backlink link="/" text="Back to list posts" withSeperator />
         </MainLayout>
     );
 }

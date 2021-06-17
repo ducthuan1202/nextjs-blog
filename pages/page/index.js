@@ -1,5 +1,5 @@
 import React from 'react'
-import MainLayout from 'components/main.layout'
+import MainLayout from 'components/layouts/main'
 
 function Page({ lucky_number }) {
 
