@@ -4,6 +4,7 @@ export default function Home() {
 
   const mode = process.env.APP_MODE;
   console.log("mode", mode)
+  console.log("mode", process.env.secrect_key)
 
   return (
     <MainLayout>

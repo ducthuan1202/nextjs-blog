@@ -13,6 +13,7 @@
 - Sử dụng file biến môi trường `.env`
 - Routing introduction
 - Điều hướng với next.useRouter() (không cần dùng thẻ a hoặc Link component)
+- Sử dụng file `next.config.js` để thêm cấu hình env
 ## Notes
 - Những file `env` có đuôi `.local` là những file cần private. Nó hơi ngược so với thông thường nhưng đó là quy định trong Nextjs
 - Khi chạy lệnh `npm run build`, nextjs sẽ build các file vào thư mục `.next` với cấu trúc thư mục tương ứng như trong `pages`
