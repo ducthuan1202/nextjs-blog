@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import MainLayout from 'components/layouts/main'
 
 export default function Home() {
@@ -8,6 +9,10 @@ export default function Home() {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Brian</title>
+      </Head>
+
       <h1 className="title">
         Welcome to Nextjs
       </h1>

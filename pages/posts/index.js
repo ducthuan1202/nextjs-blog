@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 import Image from 'next/image'
 import { posts } from 'data/posts'
 import MainLayout from 'components/layouts/main'
@@ -7,6 +8,10 @@ import MainLayout from 'components/layouts/main'
 function Posts({ posts }) {
     return (
         <MainLayout>
+            <Head>
+                <title>blog</title>
+            </Head>
+
             <h1>List Posts</h1>
 
             <ul>
@@ -30,6 +35,8 @@ function Posts({ posts }) {
     );
 }
 
+// Static Generation 
+// khi nội dung phụ thuộc vào dữ liệu bên ngoài
 export async function getStaticProps() {
     return {
         props: {
